@@ -1,0 +1,1400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>org.digimead.digi.lib.ctrl.ext.XDialog</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+      <div id="definition">
+        <a title="Go to companion" href="XDialog$.html"><img src="../../../../../../lib/trait_to_object_big.png" /></a>
+        <p id="owner"><a name="org" class="extype" href="../../../../../package.html">org</a>.<a name="org.digimead" class="extype" href="../../../../package.html">digimead</a>.<a name="org.digimead.digi" class="extype" href="../../../package.html">digi</a>.<a name="org.digimead.digi.lib" class="extype" href="../../package.html">lib</a>.<a name="org.digimead.digi.lib.ctrl" class="extype" href="../package.html">ctrl</a>.<a name="org.digimead.digi.lib.ctrl.ext" class="extype" href="package.html">ext</a></p>
+        <h1><a title="Go to companion" href="XDialog$.html">XDialog</a></h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">XDialog</span><span class="result"> extends <span name="android.support.v4.app.DialogFragment" class="extype">DialogFragment</span> with <a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a> with <span name="org.digimead.digi.lib.log.Logging" class="extype">Logging</span></span>
+      </span>
+      </h4>
+      
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a>, <span name="org.digimead.digi.lib.log.Logging" class="extype">Logging</span>, <span name="android.support.v4.app.DialogFragment" class="extype">DialogFragment</span>, <span name="android.content.DialogInterface.OnDismissListener" class="extype">OnDismissListener</span>, <span name="android.content.DialogInterface.OnCancelListener" class="extype">OnCancelListener</span>, <span name="android.support.v4.app.Fragment" class="extype">Fragment</span>, <span name="android.view.View.OnCreateContextMenuListener" class="extype">OnCreateContextMenuListener</span>, <span name="android.content.ComponentCallbacks" class="extype">ComponentCallbacks</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="org.digimead.digi.lib.ctrl.dialog.FileChooser" class="extype" href="../dialog/FileChooser.html">FileChooser</a>, <a name="org.digimead.digi.lib.ctrl.ext.XAlertDialog" class="extype" href="XAlertDialog.html">XAlertDialog</a>, <a name="org.digimead.digi.lib.ctrl.ext.XListDialog" class="extype" href="XListDialog.html">XListDialog</a></div>
+        </div></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="org.digimead.digi.lib.ctrl.ext.XDialog" class="in"><span>XDialog</span></li><li name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="in"><span>SafeDialog</span></li><li name="org.digimead.digi.lib.log.Logging" class="in"><span>Logging</span></li><li name="android.support.v4.app.DialogFragment" class="in"><span>DialogFragment</span></li><li name="android.content.DialogInterface.OnDismissListener" class="in"><span>OnDismissListener</span></li><li name="android.content.DialogInterface.OnCancelListener" class="in"><span>OnCancelListener</span></li><li name="android.support.v4.app.Fragment" class="in"><span>Fragment</span></li><li name="android.view.View.OnCreateContextMenuListener" class="in"><span>OnCreateContextMenuListener</span></li><li name="android.content.ComponentCallbacks" class="in"><span>ComponentCallbacks</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#getDialogActivity" data-isabs="true">
+      <a id="getDialogActivity():FragmentActivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDialogActivity</span><span class="params">()</span><span class="result">: <span name="android.support.v4.app.FragmentActivity" class="extype">FragmentActivity</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#tag" data-isabs="true">
+      <a id="tag():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tag</span><span class="params">()</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Concrete Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="prt" name="org.digimead.digi.lib.ctrl.ext.XDialog#defaultButtonCallback" data-isabs="false">
+      <a id="defaultButtonCallback:(XDialog) ⇒ Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultButtonCallback</span><span class="result">: (<a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a>) ⇒ <span name="scala.Any" class="extype">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#dismiss" data-isabs="false">
+      <a id="dismiss():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dismiss</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#dismissAllowingStateLoss" data-isabs="false">
+      <a id="dismissAllowingStateLoss():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dismissAllowingStateLoss</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#dump" data-isabs="false">
+      <a id="dump(String,FileDescriptor,PrintWriter,Array[String]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dump</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg1">arg1: <span name="java.io.FileDescriptor" class="extype">FileDescriptor</span></span>, <span name="arg2">arg2: <span name="java.io.PrintWriter" class="extype">PrintWriter</span></span>, <span name="arg3">arg3: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.String" class="extype">String</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → AnyRef → Any</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getActivity" data-isabs="false">
+      <a id="getActivity():FragmentActivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getActivity</span><span class="params">()</span><span class="result">: <span name="android.support.v4.app.FragmentActivity" class="extype">FragmentActivity</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getArguments" data-isabs="false">
+      <a id="getArguments():Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getArguments</span><span class="params">()</span><span class="result">: <span name="android.os.Bundle" class="extype">Bundle</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#getDialog" data-isabs="false">
+      <a id="getDialog():Dialog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDialog</span><span class="params">()</span><span class="result">: <span name="android.app.Dialog" class="extype">Dialog</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getFragmentManager" data-isabs="false">
+      <a id="getFragmentManager():FragmentManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFragmentManager</span><span class="params">()</span><span class="result">: <span name="android.support.v4.app.FragmentManager" class="extype">FragmentManager</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getId" data-isabs="false">
+      <a id="getId():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getId</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#getLayoutInflater" data-isabs="false">
+      <a id="getLayoutInflater(Bundle):LayoutInflater"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLayoutInflater</span><span class="params">(<span name="arg0">arg0: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="android.view.LayoutInflater" class="extype">LayoutInflater</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getLoaderManager" data-isabs="false">
+      <a id="getLoaderManager():LoaderManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLoaderManager</span><span class="params">()</span><span class="result">: <span name="android.support.v4.app.LoaderManager" class="extype">LoaderManager</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getResources" data-isabs="false">
+      <a id="getResources():Resources"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResources</span><span class="params">()</span><span class="result">: <span name="android.content.res.Resources" class="extype">Resources</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getRetainInstance" data-isabs="false">
+      <a id="getRetainInstance():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRetainInstance</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#getShowsDialog" data-isabs="false">
+      <a id="getShowsDialog():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getShowsDialog</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getString" data-isabs="false">
+      <a id="getString(Int,&lt;repeated...&gt;[AnyRef]):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getString</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>, <span name="arg1">arg1: <span name="scala.&lt;repeated...&gt;" class="extype">&lt;repeated...&gt;</span>[AnyRef]</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getString" data-isabs="false">
+      <a id="getString(Int):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getString</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getTag" data-isabs="false">
+      <a id="getTag():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTag</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getTargetFragment" data-isabs="false">
+      <a id="getTargetFragment():Fragment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTargetFragment</span><span class="params">()</span><span class="result">: <span name="android.support.v4.app.Fragment" class="extype">Fragment</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getTargetRequestCode" data-isabs="false">
+      <a id="getTargetRequestCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTargetRequestCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getText" data-isabs="false">
+      <a id="getText(Int):CharSequence"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getText</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.CharSequence" class="extype">CharSequence</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#getTheme" data-isabs="false">
+      <a id="getTheme():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTheme</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getUserVisibleHint" data-isabs="false">
+      <a id="getUserVisibleHint():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getUserVisibleHint</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#getView" data-isabs="false">
+      <a id="getView():View"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getView</span><span class="params">()</span><span class="result">: <span name="android.view.View" class="extype">View</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#getWindow" data-isabs="false">
+      <a id="getWindow():Window"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getWindow</span><span class="params">()</span><span class="result">: <span name="android.view.Window" class="extype">Window</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isAdded" data-isabs="false">
+      <a id="isAdded():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isAdded</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#isCancelable" data-isabs="false">
+      <a id="isCancelable():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isCancelable</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isDetached" data-isabs="false">
+      <a id="isDetached():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDetached</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#isDialogInBackStack" data-isabs="false">
+      <a id="isDialogInBackStack():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDialogInBackStack</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Loggable</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isHidden" data-isabs="false">
+      <a id="isHidden():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isHidden</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isInLayout" data-isabs="false">
+      <a id="isInLayout():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInLayout</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isRemoving" data-isabs="false">
+      <a id="isRemoving():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isRemoving</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isResumed" data-isabs="false">
+      <a id="isResumed():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isResumed</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#isShowing" data-isabs="false">
+      <a id="isShowing():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isShowing</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#isVisible" data-isabs="false">
+      <a id="isVisible():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isVisible</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.log.Logging#log" data-isabs="false">
+      <a id="log:RichLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span name="org.digimead.digi.lib.log.RichLogger" class="extype">RichLogger</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="prt" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#notifyAfter" data-isabs="false">
+      <a id="notifyAfter():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAfter</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="prt" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#notifyBefore" data-isabs="false">
+      <a id="notifyBefore():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyBefore</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li><li visbl="prt" name="org.digimead.digi.lib.ctrl.ext.SafeDialog#notifySafeDialogDismissed" data-isabs="false">
+      <a id="notifySafeDialogDismissed(DialogInterface):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifySafeDialogDismissed</span><span class="params">(<span name="dialog">dialog: <span name="android.content.DialogInterface" class="extype">DialogInterface</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onActivityCreated" data-isabs="false">
+      <a id="onActivityCreated(Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onActivityCreated</span><span class="params">(<span name="arg0">arg0: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onActivityResult" data-isabs="false">
+      <a id="onActivityResult(Int,Int,Intent):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onActivityResult</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>, <span name="arg2">arg2: <span name="android.content.Intent" class="extype">Intent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onAttach" data-isabs="false">
+      <a id="onAttach(Activity):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onAttach</span><span class="params">(<span name="arg0">arg0: <span name="android.app.Activity" class="extype">Activity</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onCancel" data-isabs="false">
+      <a id="onCancel(DialogInterface):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCancel</span><span class="params">(<span name="arg0">arg0: <span name="android.content.DialogInterface" class="extype">DialogInterface</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → OnCancelListener</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onConfigurationChanged" data-isabs="false">
+      <a id="onConfigurationChanged(Configuration):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onConfigurationChanged</span><span class="params">(<span name="arg0">arg0: <span name="android.content.res.Configuration" class="extype">Configuration</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → ComponentCallbacks</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onContextItemSelected" data-isabs="false">
+      <a id="onContextItemSelected(MenuItem):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onContextItemSelected</span><span class="params">(<span name="arg0">arg0: <span name="android.view.MenuItem" class="extype">MenuItem</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onCreate" data-isabs="false">
+      <a id="onCreate(Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreate</span><span class="params">(<span name="arg0">arg0: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onCreateAnimation" data-isabs="false">
+      <a id="onCreateAnimation(Int,Boolean,Int):Animation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreateAnimation</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>, <span name="arg1">arg1: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="arg2">arg2: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="android.view.animation.Animation" class="extype">Animation</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onCreateContextMenu" data-isabs="false">
+      <a id="onCreateContextMenu(ContextMenu,View,ContextMenuInfo):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreateContextMenu</span><span class="params">(<span name="arg0">arg0: <span name="android.view.ContextMenu" class="extype">ContextMenu</span></span>, <span name="arg1">arg1: <span name="android.view.View" class="extype">View</span></span>, <span name="arg2">arg2: <span name="android.view.ContextMenu.ContextMenuInfo" class="extype">ContextMenuInfo</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → OnCreateContextMenuListener</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onCreateDialog" data-isabs="false">
+      <a id="onCreateDialog(Bundle):Dialog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreateDialog</span><span class="params">(<span name="savedInstanceState">savedInstanceState: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="android.app.Dialog" class="extype">Dialog</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onCreateOptionsMenu" data-isabs="false">
+      <a id="onCreateOptionsMenu(Menu,MenuInflater):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreateOptionsMenu</span><span class="params">(<span name="arg0">arg0: <span name="android.view.Menu" class="extype">Menu</span></span>, <span name="arg1">arg1: <span name="android.view.MenuInflater" class="extype">MenuInflater</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onCreateView" data-isabs="false">
+      <a id="onCreateView(LayoutInflater,ViewGroup,Bundle):View"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCreateView</span><span class="params">(<span name="inflater">inflater: <span name="android.view.LayoutInflater" class="extype">LayoutInflater</span></span>, <span name="container">container: <span name="android.view.ViewGroup" class="extype">ViewGroup</span></span>, <span name="savedInstanceState">savedInstanceState: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="android.view.View" class="extype">View</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onDestroy" data-isabs="false">
+      <a id="onDestroy():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDestroy</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onDestroyOptionsMenu" data-isabs="false">
+      <a id="onDestroyOptionsMenu():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDestroyOptionsMenu</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onDestroyView" data-isabs="false">
+      <a id="onDestroyView():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDestroyView</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onDetach" data-isabs="false">
+      <a id="onDetach():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDetach</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onDismiss" data-isabs="false">
+      <a id="onDismiss(DialogInterface):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDismiss</span><span class="params">(<span name="dialog">dialog: <span name="android.content.DialogInterface" class="extype">DialogInterface</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → DialogFragment → OnDismissListener</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onHiddenChanged" data-isabs="false">
+      <a id="onHiddenChanged(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onHiddenChanged</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onInflate" data-isabs="false">
+      <a id="onInflate(Activity,AttributeSet,Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onInflate</span><span class="params">(<span name="arg0">arg0: <span name="android.app.Activity" class="extype">Activity</span></span>, <span name="arg1">arg1: <span name="android.util.AttributeSet" class="extype">AttributeSet</span></span>, <span name="arg2">arg2: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onLowMemory" data-isabs="false">
+      <a id="onLowMemory():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onLowMemory</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → ComponentCallbacks</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onOptionsItemSelected" data-isabs="false">
+      <a id="onOptionsItemSelected(MenuItem):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onOptionsItemSelected</span><span class="params">(<span name="arg0">arg0: <span name="android.view.MenuItem" class="extype">MenuItem</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onOptionsMenuClosed" data-isabs="false">
+      <a id="onOptionsMenuClosed(Menu):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onOptionsMenuClosed</span><span class="params">(<span name="arg0">arg0: <span name="android.view.Menu" class="extype">Menu</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onPause" data-isabs="false">
+      <a id="onPause():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onPause</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onPrepareOptionsMenu" data-isabs="false">
+      <a id="onPrepareOptionsMenu(Menu):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onPrepareOptionsMenu</span><span class="params">(<span name="arg0">arg0: <span name="android.view.Menu" class="extype">Menu</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="org.digimead.digi.lib.ctrl.ext.XDialog#onResume" data-isabs="false">
+      <a id="onResume():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onResume</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.digimead.digi.lib.ctrl.ext.XDialog" class="extype" href="">XDialog</a> → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onSaveInstanceState" data-isabs="false">
+      <a id="onSaveInstanceState(Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onSaveInstanceState</span><span class="params">(<span name="arg0">arg0: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onStart" data-isabs="false">
+      <a id="onStart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onStart</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#onStop" data-isabs="false">
+      <a id="onStop():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onStop</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment → Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#onViewCreated" data-isabs="false">
+      <a id="onViewCreated(View,Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onViewCreated</span><span class="params">(<span name="arg0">arg0: <span name="android.view.View" class="extype">View</span></span>, <span name="arg1">arg1: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#registerForContextMenu" data-isabs="false">
+      <a id="registerForContextMenu(View):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">registerForContextMenu</span><span class="params">(<span name="arg0">arg0: <span name="android.view.View" class="extype">View</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setArguments" data-isabs="false">
+      <a id="setArguments(Bundle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setArguments</span><span class="params">(<span name="arg0">arg0: <span name="android.os.Bundle" class="extype">Bundle</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#setCancelable" data-isabs="false">
+      <a id="setCancelable(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCancelable</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setHasOptionsMenu" data-isabs="false">
+      <a id="setHasOptionsMenu(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setHasOptionsMenu</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setInitialSavedState" data-isabs="false">
+      <a id="setInitialSavedState(SavedState):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setInitialSavedState</span><span class="params">(<span name="arg0">arg0: <span name="android.support.v4.app.Fragment.SavedState" class="extype">SavedState</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setMenuVisibility" data-isabs="false">
+      <a id="setMenuVisibility(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setMenuVisibility</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setRetainInstance" data-isabs="false">
+      <a id="setRetainInstance(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setRetainInstance</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#setShowsDialog" data-isabs="false">
+      <a id="setShowsDialog(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setShowsDialog</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#setStyle" data-isabs="false">
+      <a id="setStyle(Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setStyle</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setTargetFragment" data-isabs="false">
+      <a id="setTargetFragment(Fragment,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTargetFragment</span><span class="params">(<span name="arg0">arg0: <span name="android.support.v4.app.Fragment" class="extype">Fragment</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#setUserVisibleHint" data-isabs="false">
+      <a id="setUserVisibleHint(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setUserVisibleHint</span><span class="params">(<span name="arg0">arg0: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#show" data-isabs="false">
+      <a id="show(FragmentTransaction,String):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">show</span><span class="params">(<span name="arg0">arg0: <span name="android.support.v4.app.FragmentTransaction" class="extype">FragmentTransaction</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.DialogFragment#show" data-isabs="false">
+      <a id="show(FragmentManager,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">show</span><span class="params">(<span name="arg0">arg0: <span name="android.support.v4.app.FragmentManager" class="extype">FragmentManager</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogFragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#startActivity" data-isabs="false">
+      <a id="startActivity(Intent):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startActivity</span><span class="params">(<span name="arg0">arg0: <span name="android.content.Intent" class="extype">Intent</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#startActivityForResult" data-isabs="false">
+      <a id="startActivityForResult(Intent,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startActivityForResult</span><span class="params">(<span name="arg0">arg0: <span name="android.content.Intent" class="extype">Intent</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="android.support.v4.app.Fragment#unregisterForContextMenu" data-isabs="false">
+      <a id="unregisterForContextMenu(View):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unregisterForContextMenu</span><span class="params">(<span name="arg0">arg0: <span name="android.view.View" class="extype">View</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Fragment</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="parent">
+              <h3>Inherited from <a name="org.digimead.digi.lib.ctrl.ext.SafeDialog" class="extype" href="SafeDialog.html">SafeDialog</a></h3>
+            </div><div name="org.digimead.digi.lib.log.Logging" class="parent">
+              <h3>Inherited from <span name="org.digimead.digi.lib.log.Logging" class="extype">Logging</span></h3>
+            </div><div name="android.support.v4.app.DialogFragment" class="parent">
+              <h3>Inherited from <span name="android.support.v4.app.DialogFragment" class="extype">DialogFragment</span></h3>
+            </div><div name="android.content.DialogInterface.OnDismissListener" class="parent">
+              <h3>Inherited from <span name="android.content.DialogInterface.OnDismissListener" class="extype">OnDismissListener</span></h3>
+            </div><div name="android.content.DialogInterface.OnCancelListener" class="parent">
+              <h3>Inherited from <span name="android.content.DialogInterface.OnCancelListener" class="extype">OnCancelListener</span></h3>
+            </div><div name="android.support.v4.app.Fragment" class="parent">
+              <h3>Inherited from <span name="android.support.v4.app.Fragment" class="extype">Fragment</span></h3>
+            </div><div name="android.view.View.OnCreateContextMenuListener" class="parent">
+              <h3>Inherited from <span name="android.view.View.OnCreateContextMenuListener" class="extype">OnCreateContextMenuListener</span></h3>
+            </div><div name="android.content.ComponentCallbacks" class="parent">
+              <h3>Inherited from <span name="android.content.ComponentCallbacks" class="extype">ComponentCallbacks</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
