@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2012 Alexey Aksenov ezh@ezh.msk.ru.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and limitations under the License.
+-->
+<resources>
+
+    <string-array name="debugLevelDisplay">
+        <item>The OFF has the highest possible rank and is intended to turn off logging</item>
+        <item>The ERROR level designates error events that might still allow the application to continue running</item>
+        <item>The WARN level designates potentially harmful situations</item>
+        <item>The INFO level designates informational messages that highlight the progress of the application at coarse-grained level</item>
+        <item>The DEBUG Level designates fine-grained informational events that are most useful to debug an application</item>
+        <item>The TRACE Level designates finer-grained informational events than the DEBUG</item>
+    </string-array>
+    <string-array name="debugLevelValue">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="layoutDisplay">
+        <item>Auto</item>
+        <item>Landscape</item>
+        <item>Reverse Landscape</item>
+        <item>Portrait</item>
+        <item>Reverse Portrait</item>
+    </string-array>
+    <string-array name="layoutValue">
+        <item>4</item> <!-- SCREEN_ORIENTATION_SENSOR -->
+        <item>0</item> <!-- SCREEN_ORIENTATION_LANDSCAPE -->
+        <item>8</item> <!-- SCREEN_ORIENTATION_REVERSE_LANDSCAPE -->
+        <item>1</item> <!-- SCREEN_ORIENTATION_PORTRAIT -->
+        <item>9</item> <!-- SCREEN_ORIENTATION_REVERSE_PORTRAIT -->
+    </string-array>
+    <string-array name="shutdownTimeoutDisplay">
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>never</item>
+    </string-array>
+    <string-array name="shutdownTimeoutValue">
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1800</item>
+        <item>3600</item>
+        <item>7200</item>
+        <item>0</item>
+    </string-array>
+
+</resources>
