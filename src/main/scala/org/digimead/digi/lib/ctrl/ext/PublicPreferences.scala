@@ -1,4 +1,6 @@
 /**
+ * Digi-Lib-Ctrl - common module for all android-digiNNN projects based on DigiControl
+ *
  * Copyright (c) 2010-2012 Alexey Aksenov ezh@ezh.msk.ru
  * This file is part of the Documentum Elasticus project.
  *
