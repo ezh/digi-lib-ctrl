@@ -26,15 +26,16 @@ import scala.collection.mutable.HashSet
 import scala.collection.mutable.SynchronizedMap
 import scala.collection.mutable.SynchronizedSet
 
-import org.digimead.digi.lib.ctrl.ext.SafeDialog
-import org.digimead.digi.lib.ctrl.ext.XAndroid
 import org.digimead.digi.lib.aop.Loggable
 import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.ctrl.dialog.FailedMarket
 import org.digimead.digi.lib.ctrl.dialog.InstallControl
 import org.digimead.digi.lib.ctrl.dialog.Report
-import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.ctrl.ext.SafeDialog
+import org.digimead.digi.lib.ctrl.ext.XAndroid
 import org.digimead.digi.lib.ctrl.message.Dispatcher
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
 import android.accounts.AccountManager
 import android.app.Activity

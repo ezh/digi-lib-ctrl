@@ -21,19 +21,20 @@ package org.digimead.digi.lib.ctrl.dialog
 import scala.annotation.implicitNotFound
 import scala.annotation.tailrec
 
-import org.digimead.digi.lib.ctrl.AnyBase
-import org.digimead.digi.lib.ctrl.ext.XResource
 import org.digimead.digi.lib.aop.Loggable
+import org.digimead.digi.lib.ctrl.AnyBase
+import org.digimead.digi.lib.ctrl.ExceptionHandler
 import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.ctrl.declaration.DOption
-import org.digimead.digi.lib.ctrl.log.AndroidLogger
-import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
+import org.digimead.digi.lib.ctrl.ext.PublicPreferences
+import org.digimead.digi.lib.ctrl.ext.XResource
+import org.digimead.digi.lib.ctrl.log.appender.AndroidAppender
 import org.digimead.digi.lib.ctrl.message.Dispatcher
 import org.digimead.digi.lib.ctrl.message.IAmMumble
 import org.digimead.digi.lib.ctrl.message.IAmWarn
-import org.digimead.digi.lib.ctrl.ExceptionHandler
-import org.digimead.digi.lib.ctrl.ext.PublicPreferences
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -49,7 +50,6 @@ import android.preference.PreferenceManager
 import android.widget.Toast
 
 abstract class Preferences(implicit dispatcher: Dispatcher) extends PreferenceActivity with Logging with OnSharedPreferenceChangeListener {
-  implicit protected val logger: RichLogger
   protected lazy val shared = PreferenceManager.getDefaultSharedPreferences(this)
   @Loggable
   override def onCreate(savedInstanceState: Bundle) {
@@ -114,31 +114,31 @@ abstract class Preferences(implicit dispatcher: Dispatcher) extends PreferenceAc
       case p: ListPreference if key == DOption.DebugLogLevel.tag =>
         if (shared.contains(DOption.DebugLogLevel.tag))
           // DOption.DebugLogLevel.tag exists
-          Preferences.DebugLogLevel.set(p.getValue.toString, this, notify)(logger, dispatcher)
+          Preferences.DebugLogLevel.set(p.getValue.toString, this, notify)(log, dispatcher)
         else
           // DOption.DebugLogLevel.tag not exists
-          Preferences.DebugLogLevel.set(Preferences.DebugLogLevel.get(this).toString, this, notify)(logger, dispatcher)
+          Preferences.DebugLogLevel.set(Preferences.DebugLogLevel.get(this).toString, this, notify)(log, dispatcher)
       case p: CheckBoxPreference if key == DOption.DebugAndroidLogger.tag =>
         if (shared.contains(DOption.DebugAndroidLogger.tag))
           // DOption.DebugAndroidLogger.tag exists
-          Preferences.DebugAndroidLogger.set(shared.getBoolean(DOption.DebugAndroidLogger.tag, Preferences.DebugAndroidLogger.default), this, notify)(logger, dispatcher)
+          Preferences.DebugAndroidLogger.set(shared.getBoolean(DOption.DebugAndroidLogger.tag, Preferences.DebugAndroidLogger.default), this, notify)(log, dispatcher)
         else
           // DOption.DebugAndroidLogger.tag not exists
-          Preferences.DebugAndroidLogger.set(Preferences.DebugAndroidLogger.get(this), this, notify)(logger, dispatcher)
+          Preferences.DebugAndroidLogger.set(Preferences.DebugAndroidLogger.get(this), this, notify)(log, dispatcher)
       case p: ListPreference if key == DOption.PreferredLayoutOrientation.tag =>
         if (shared.contains(DOption.PreferredLayoutOrientation.tag))
           // DOption.PreferredLayoutOrientation.tag exists
-          Preferences.PreferredLayoutOrientation.set(p.getValue.toString, this, notify)(logger, dispatcher)
+          Preferences.PreferredLayoutOrientation.set(p.getValue.toString, this, notify)(log, dispatcher)
         else
           // DOption.PreferredLayoutOrientation.tag not exists
-          Preferences.PreferredLayoutOrientation.set(Preferences.PreferredLayoutOrientation.get(this).toString, this, notify)(logger, dispatcher)
+          Preferences.PreferredLayoutOrientation.set(Preferences.PreferredLayoutOrientation.get(this).toString, this, notify)(log, dispatcher)
       case p: ListPreference if key == DOption.ShutdownTimeout.tag =>
         if (shared.contains(DOption.ShutdownTimeout.tag))
           // DOption.ShutdownTimeout.tag exists
-          Preferences.ShutdownTimeout.set(p.getValue.toString, this, notify)(logger, dispatcher)
+          Preferences.ShutdownTimeout.set(p.getValue.toString, this, notify)(log, dispatcher)
         else
           // DOption.ShutdownTimeout.tag not exists
-          Preferences.ShutdownTimeout.set(Preferences.ShutdownTimeout.get(this).toString, this, notify)(logger, dispatcher)
+          Preferences.ShutdownTimeout.set(Preferences.ShutdownTimeout.get(this).toString, this, notify)(log, dispatcher)
     }
   }
 }
@@ -292,10 +292,10 @@ object Preferences extends Logging {
         lastAndroidLogging = f
       }
       val message = if (f) {
-        Logging.addLogger(AndroidLogger)
+        Logging.addAppender(AndroidAppender)
         XResource.getString(context, "debug_android_on_notify").getOrElse("Android logging facility enabled")
       } else {
-        Logging.delLogger(AndroidLogger)
+        Logging.delAppender(AndroidAppender)
         XResource.getString(context, "debug_android_off_notify").getOrElse("Android logging facility disabled")
       }
       if (notify)

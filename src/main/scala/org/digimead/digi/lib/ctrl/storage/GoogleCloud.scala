@@ -28,9 +28,11 @@ import java.util.concurrent.ThreadFactory
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicReference
+
 import scala.actors.Futures
 import scala.annotation.tailrec
 import scala.io.Codec.charset2codec
+
 import org.apache.http.HttpHost
 import org.apache.http.HttpResponse
 import org.apache.http.HttpVersion
@@ -52,15 +54,16 @@ import org.apache.http.params.HttpConnectionParams
 import org.apache.http.params.HttpProtocolParams
 import org.apache.http.protocol.HTTP
 import org.apache.http.util.EntityUtils
-import org.digimead.digi.lib.ctrl.ext.XResource
+import org.digimead.digi.lib.ctrl.ExceptionHandler
 import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.ctrl.declaration.DTimeout
+import org.digimead.digi.lib.ctrl.ext.XResource
 import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.ctrl.ExceptionHandler
+import org.digimead.digi.lib.util.Util
 import org.json.JSONObject
+
 import android.provider.Settings
 import android.util.Base64
-import org.digimead.digi.lib.util.Util
 
 /*
  * mobile application act as web server ;-) strictly within Google OAuth2 draft10 manual, Ezh

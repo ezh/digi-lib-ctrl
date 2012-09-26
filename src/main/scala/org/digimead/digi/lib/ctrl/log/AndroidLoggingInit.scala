@@ -19,9 +19,9 @@
 package org.digimead.digi.lib.ctrl.log
 
 import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.Logger
-import org.digimead.digi.lib.log.RichLogger
-import android.content.Context
+import org.digimead.digi.lib.log.appender.Appender
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.slf4j.LoggerFactory
 
 class AndroidLoggingInit extends Logging.Init {
   val logPrefix = "@" // prefix for all adb logcat TAGs, everyone may change (but should not) it on his/her own risk
@@ -32,7 +32,7 @@ class AndroidLoggingInit extends Logging.Init {
   val isWarnEnabled = true
   val isErrorEnabled = true
   val shutdownHook = new Thread() { override def run() = Logging.deinit }
-  val richLoggerBuilder = (name) => new RichLogger(name)
+  val richLoggerBuilder = (name: String) => new RichLogger(LoggerFactory.getLogger(name))
   val flushLimit = 1000
-  val loggers = Seq[Logger]()
+  val appenders = Seq[Appender]()
 }

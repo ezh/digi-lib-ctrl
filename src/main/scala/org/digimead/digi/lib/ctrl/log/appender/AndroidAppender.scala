@@ -16,16 +16,20 @@
  * limitations under the License.
  */
 
-package org.digimead.digi.lib.ctrl.log
+package org.digimead.digi.lib.ctrl.log.appender
 
 import java.util.StringTokenizer
-import scala.collection.immutable.HashMap
-import android.util.Log
-import org.digimead.digi.lib.log.Logger
-import org.digimead.digi.lib.log.Record
-import org.digimead.digi.lib.log.Logging
 
-object AndroidLogger extends Logger {
+import scala.collection.immutable.HashMap
+
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.Record
+import org.digimead.digi.lib.log.appender.Appender
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
+
+import android.util.Log
+
+object AndroidAppender extends Appender {
   private[lib] var validName = new HashMap[String, String]()
   final val TAG_MAX_LENGTH = 23; // tag names cannot be longer on Android platform
   // see also android/system/core/include/cutils/property.h
@@ -37,7 +41,7 @@ object AndroidLogger extends Logger {
         validName = validName + (record.tag -> valid)
         if (valid != record.tag)
           Log.i(Logging.commonLogger.getName,
-            "Logger name '" + record.tag + "' exceeds maximum length of " + AndroidLogger.TAG_MAX_LENGTH +
+            "Logger name '" + record.tag + "' exceeds maximum length of " + AndroidAppender.TAG_MAX_LENGTH +
               " characters, using '" + valid + "' instead.")
         valid
       })
@@ -74,7 +78,7 @@ object AndroidLogger extends Logger {
    */
   private def forceValidName(_name: String): String = {
     var name = _name
-    if (name != null && name.length() > AndroidLogger.TAG_MAX_LENGTH) {
+    if (name != null && name.length() > AndroidAppender.TAG_MAX_LENGTH) {
       val st = new StringTokenizer(name, ".")
       if (st.hasMoreTokens()) { // note that empty tokens are skipped, i.e., "aa..bb" has tokens "aa", "bb"
         val sb = new StringBuilder()
@@ -95,8 +99,8 @@ object AndroidLogger extends Logger {
       }
       // Either we had no useful dot location at all or name still too long.
       // Take leading part and append '*' to indicate that it was truncated
-      if (name.length() > AndroidLogger.TAG_MAX_LENGTH)
-        name = name.substring(0, AndroidLogger.TAG_MAX_LENGTH - 1) + '*'
+      if (name.length() > AndroidAppender.TAG_MAX_LENGTH)
+        name = name.substring(0, AndroidAppender.TAG_MAX_LENGTH - 1) + '*'
     }
     name
   }

@@ -27,11 +27,12 @@ import scala.Array.canBuildFrom
 import org.digimead.digi.lib.aop.Loggable
 import org.digimead.digi.lib.ctrl.AnyBase
 import org.digimead.digi.lib.ctrl.base.Report
-import org.digimead.digi.lib.log.Logger
 import org.digimead.digi.lib.log.Logging
 import org.digimead.digi.lib.log.Record
+import org.digimead.digi.lib.log.appender.Appender
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
-object AndroidFileLogger extends Logger {
+object AndroidFileAppender extends Appender {
   private[lib] var file: Option[File] = None
   private[lib] var output: Option[BufferedWriter] = None
   private val fileLimit = 102400 // 100kB

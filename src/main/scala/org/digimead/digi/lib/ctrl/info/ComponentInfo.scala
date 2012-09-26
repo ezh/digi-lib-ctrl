@@ -324,8 +324,7 @@ object ComponentInfo extends Logging {
       check(Check.URL(field), in.replaceFirst("market://details", "https://market.android.com/details")).map(replaced => in)
     case Check.Version(field) =>
       val version = new Version(in)
-      if (in.length() > 128 || (version.getMajorVersion() == 0 && version.getMinorVersion() == 0 &&
-        version.getIncrementalVersion() == 0 && version.getBuildNumber() == 0 && version.getQualifier.isEmpty)) {
+      if (in.length() > 128 || (version.comps.isEmpty)) {
         log.warn("descriptor field \"" + kind.field + "\" contain invalid version \"" + in + "\"")
         return None
       }

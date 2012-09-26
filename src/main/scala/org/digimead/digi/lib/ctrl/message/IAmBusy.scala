@@ -21,11 +21,11 @@ package org.digimead.digi.lib.ctrl.message
 import scala.annotation.implicitNotFound
 
 import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
-import android.os.Parcelable
 import android.os.Parcel
-
+import android.os.Parcelable
 
 case class IAmBusy(val origin: Origin, val message: String,
   val ts: Long = System.currentTimeMillis)(implicit @transient val logger: RichLogger,

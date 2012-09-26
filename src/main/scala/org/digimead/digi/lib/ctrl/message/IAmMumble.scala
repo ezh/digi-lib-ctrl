@@ -20,12 +20,13 @@ package org.digimead.digi.lib.ctrl.message
 
 import scala.annotation.implicitNotFound
 
+import org.digimead.digi.lib.ctrl.message.Origin.anyRefToOrigin
 import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
-import org.digimead.digi.lib.ctrl.message.Origin.richLoggerToOrigin
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
-import android.os.Parcelable
 import android.os.Parcel
+import android.os.Parcelable
 
 case class IAmMumble(val origin: Origin, val message: String, @transient val onClickCallback: Option[() => Unit],
   val ts: Long = System.currentTimeMillis)(implicit @transient val logger: RichLogger,

@@ -20,15 +20,16 @@ package org.digimead.digi.lib.ctrl.dialog
 
 import scala.annotation.implicitNotFound
 
-import org.digimead.digi.lib.ctrl.ext.XResource
 import org.digimead.digi.lib.aop.Loggable
 import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.ctrl.declaration.DConstant
 import org.digimead.digi.lib.ctrl.declaration.DIntent
-import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
+import org.digimead.digi.lib.ctrl.ext.XResource
 import org.digimead.digi.lib.ctrl.message.Dispatcher
 import org.digimead.digi.lib.ctrl.message.IAmMumble
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 import org.digimead.digi.lib.util.Version
 
 import android.app.Activity

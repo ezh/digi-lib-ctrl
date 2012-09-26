@@ -18,16 +18,18 @@
 
 package org.digimead.digi.lib.ctrl.block
 
+import scala.annotation.implicitNotFound
 import scala.ref.WeakReference
 
 import org.digimead.digi.lib.ctrl.AnyBase
+import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.ctrl.ext.XAPI
 import org.digimead.digi.lib.ctrl.ext.XResource
-import org.digimead.digi.lib.ctrl.base.AppComponent
-import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
 import org.digimead.digi.lib.ctrl.message.Dispatcher
 import org.digimead.digi.lib.ctrl.message.IAmYell
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
 import com.commonsware.cwac.merge.MergeAdapter
 

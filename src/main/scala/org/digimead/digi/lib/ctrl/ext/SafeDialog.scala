@@ -375,7 +375,7 @@ object SafeDialog extends Logging {
     private val lock = new Object
 
     @Loggable
-    override def set(entry: Entry, signalAll: Boolean = true): Unit = lock.synchronized {
+    override def set(entry: Entry): Unit = lock.synchronized {
       replaceFlag.set(false)
       log.debugWhere("set safe dialog to " + entry, Logging.Where.BEFORE)
       if (activityDialogGuard != null) {
@@ -457,17 +457,18 @@ object SafeDialog extends Logging {
               log.debug("replaced dialog " + entry + " dismissed")
               replaceFlag.synchronized { replaceFlag.notifyAll }
             } else {
-              unset(false)
+              // TODO possible bug, notify only one recipient
+              unset()
               SafeDialog.this.notifyAll()
             }
           }
         })
       }
-      super.set(entry, signalAll)
+      super.set(entry)
     }
     def updateDismissCallback(f: Option[() => Any]) =
       super.set(super.get.copy(dismissCb = f))
-    override def unset(signalAll: Boolean = true) = {
+    override def unset() = {
       log.debugWhere("unset safe dialog '" + value + "'", Logging.Where.BEFORE)
       if (activityDialogGuard != null) {
         activityDialogGuard.shutdownNow
@@ -488,7 +489,7 @@ object SafeDialog extends Logging {
           dismissCb.foreach(_())
         case _ =>
       }
-      super.unset(signalAll)
+      super.unset()
     }
   }
   private[SafeDialog] case class Entry(val tag: Option[String],

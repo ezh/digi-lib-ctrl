@@ -20,10 +20,11 @@ package org.digimead.digi.lib.ctrl.message
 
 import org.digimead.digi.lib.ctrl.base.AppComponent
 import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 
-import android.os.Parcelable
 import android.os.Parcel
+import android.os.Parcelable
 
 case class Origin private (val code: Int, val name: String,
   val packageName: String = Origin.packageName) extends Parcelable {

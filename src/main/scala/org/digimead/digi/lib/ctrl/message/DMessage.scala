@@ -20,7 +20,7 @@ package org.digimead.digi.lib.ctrl.message
 
 import scala.annotation.implicitNotFound
 
-import org.digimead.digi.lib.log.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger
 
 import android.os.Parcelable
 

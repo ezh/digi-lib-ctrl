@@ -22,6 +22,7 @@ import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
+
 import scala.Option.option2Iterable
 import scala.actors.Futures
 import scala.annotation.implicitNotFound
@@ -30,23 +31,27 @@ import scala.collection.mutable.HashMap
 import scala.collection.mutable.Publisher
 import scala.collection.mutable.SynchronizedMap
 import scala.xml.XML
-import org.digimead.digi.lib.ctrl.ICtrlComponent
-import org.digimead.digi.lib.ctrl.AnyBase
-import org.digimead.digi.lib.ctrl.ext.XAndroid
+
 import org.digimead.digi.lib.aop.Loggable
+import org.digimead.digi.lib.ctrl.AnyBase
+import org.digimead.digi.lib.ctrl.CtrlUtil
+import org.digimead.digi.lib.ctrl.ICtrlComponent
 import org.digimead.digi.lib.ctrl.declaration.DConstant
 import org.digimead.digi.lib.ctrl.declaration.DIntent
 import org.digimead.digi.lib.ctrl.declaration.DPermission
 import org.digimead.digi.lib.ctrl.declaration.DState
 import org.digimead.digi.lib.ctrl.declaration.DTimeout
 import org.digimead.digi.lib.ctrl.dialog.Preferences
+import org.digimead.digi.lib.ctrl.ext.XAndroid
 import org.digimead.digi.lib.ctrl.info.ComponentInfo
-import org.digimead.digi.lib.log.Logging
-import org.digimead.digi.lib.log.RichLogger
 import org.digimead.digi.lib.ctrl.message.DMessage
 import org.digimead.digi.lib.ctrl.message.Dispatcher
+import org.digimead.digi.lib.log.Logging
+import org.digimead.digi.lib.log.logger.RichLogger
+import org.digimead.digi.lib.log.logger.RichLogger.rich2slf4j
 import org.digimead.digi.lib.util.SyncVar
 import org.digimead.digi.lib.util.Version
+
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -54,7 +59,6 @@ import android.content.ServiceConnection
 import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
-import org.digimead.digi.lib.ctrl.CtrlUtil
 
 protected class AppComponent private () extends Logging {
   /** profiling support */
@@ -403,18 +407,18 @@ object AppComponent extends Logging with Publisher[AppComponentEvent] {
     @volatile private var lastNonBusyState: AppComponent.State = null
     private var busyCounter = 0
     set(AppComponent.State(DState.Unknown))
-    override def set(newState: AppComponent.State, signalAll: Boolean = true): Unit = synchronized {
+    override def set(newState: AppComponent.State): Unit = synchronized {
       if (newState.value == DState.Busy) {
         busyCounter += 1
         log.debug("increase status busy counter to " + busyCounter)
         if (isSet && get.value != DState.Busy)
           lastNonBusyState = get
-        super.set(newState, signalAll)
+        super.set(newState)
       } else if (busyCounter != 0) {
         lastNonBusyState = newState
       } else {
         lastNonBusyState = newState
-        super.set(newState, signalAll)
+        super.set(newState)
       }
       log.debugWhere("set status to " + newState, Logging.Where.BEFORE)
       try { publish(newState) } catch { case e => log.error(e.getMessage, e) }
